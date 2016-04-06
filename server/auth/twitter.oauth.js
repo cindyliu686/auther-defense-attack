@@ -3,6 +3,7 @@
 var router = require('express').Router();
 var passport = require('passport');
 var TwitterStrategy = require('passport-twitter');
+var twitterKeys = require('./oauth.keys.js').twitterKeys;
 
 var User = require('../api/users/user.model');
 

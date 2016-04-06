@@ -6,6 +6,8 @@ var router = require('express').Router(),
 
 var User = require('../api/users/user.model');
 
+var sessionSecret = require('./session.key.js').sessionSecret
+
 router.use(function (req, res, next) {
 	var bodyString = '';
 	req.on('data', function (chunk) {
@@ -19,7 +21,7 @@ router.use(function (req, res, next) {
 });
 
 router.use(session({
-	secret: 'tongiscool',
+	secret: sessionSecret,
 	resave: false,
 	saveUninitialized: false
 }));

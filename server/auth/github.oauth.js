@@ -3,6 +3,7 @@
 var router = require('express').Router();
 var passport = require('passport');
 var GitHubStrategy = require('passport-github').Strategy;
+var githubKeys = require('./oauth.keys.js').githubKeys;
 
 var User = require('../api/users/user.model');
 
